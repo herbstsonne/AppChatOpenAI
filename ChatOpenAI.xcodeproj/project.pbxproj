@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD55B8BE295166A6006572CC /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD55B8BD295166A6006572CC /* APICaller.swift */; };
+		CD55B8C1295169EA006572CC /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD55B8C0295169EA006572CC /* OpenAISwift */; };
 		CD9FC040294F830B0035DAFF /* ChatOpenAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FC03F294F830B0035DAFF /* ChatOpenAIApp.swift */; };
 		CD9FC042294F830B0035DAFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FC041294F830B0035DAFF /* ContentView.swift */; };
 		CD9FC044294F830E0035DAFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9FC043294F830E0035DAFF /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD55B8BD295166A6006572CC /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		CD9FC03C294F830B0035DAFF /* ChatOpenAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatOpenAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9FC03F294F830B0035DAFF /* ChatOpenAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOpenAIApp.swift; sourceTree = "<group>"; };
 		CD9FC041294F830B0035DAFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD55B8C1295169EA006572CC /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD55B8BF295169EA006572CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD9FC033294F830B0035DAFF = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +89,7 @@
 				CD9FC04F294F83110035DAFF /* ChatOpenAITests */,
 				CD9FC059294F83110035DAFF /* ChatOpenAIUITests */,
 				CD9FC03D294F830B0035DAFF /* Products */,
+				CD55B8BF295169EA006572CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +110,7 @@
 				CD9FC041294F830B0035DAFF /* ContentView.swift */,
 				CD9FC043294F830E0035DAFF /* Assets.xcassets */,
 				CD9FC045294F830E0035DAFF /* Preview Content */,
+				CD55B8BD295166A6006572CC /* APICaller.swift */,
 			);
 			path = ChatOpenAI;
 			sourceTree = "<group>";
@@ -143,6 +156,9 @@
 			dependencies = (
 			);
 			name = ChatOpenAI;
+			packageProductDependencies = (
+				CD55B8C0295169EA006572CC /* OpenAISwift */,
+			);
 			productName = ChatOpenAI;
 			productReference = CD9FC03C294F830B0035DAFF /* ChatOpenAI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,9 @@
 				Base,
 			);
 			mainGroup = CD9FC033294F830B0035DAFF;
+			packageReferences = (
+				CD9FC069294F83280035DAFF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = CD9FC03D294F830B0035DAFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9FC042294F830B0035DAFF /* ContentView.swift in Sources */,
+				CD55B8BE295166A6006572CC /* APICaller.swift in Sources */,
 				CD9FC040294F830B0035DAFF /* ChatOpenAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +603,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD9FC069294F83280035DAFF /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD55B8C0295169EA006572CC /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9FC069294F83280035DAFF /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD9FC034294F830B0035DAFF /* Project object */;
 }

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ChatOpenAIApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+  
+  init() {
+    APICaller.shared.setup()
+  }
+  var body: some Scene {
+      WindowGroup {
+          ContentView()
+      }
+  }
 }
