@@ -19,7 +19,7 @@ final class APICaller {
   
   //what does escaping?
   public func getResponse(input: String, completion: @escaping (Result<String, Error>) -> Void) {
-    client?.sendCompletion(with: input, completionHandler: { result in
+    client?.sendCompletion(with: input, maxTokens: Int(UInt8.max), completionHandler: { result in
       switch result {
       case .success(let model):
         let output = model.choices.first?.text ?? ""

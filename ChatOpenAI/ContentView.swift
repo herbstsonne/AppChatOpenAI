@@ -7,16 +7,17 @@ struct ContentView: View {
   @State private var answerText = ""
   
   var body: some View {
-    ScrollView {
+    List {
       VStack {
         TextField("Ask everything...", text: $searchText)
           .onSubmit {
             handleAnswer()
           }
           .padding(.all)
-        Text("Chatbot says:")
+        Text("Chatbot says: ")
         Label("\(answerText)", systemImage: "")
           .labelStyle(.titleOnly)
+        Spacer()
       }
       .padding()
     }
