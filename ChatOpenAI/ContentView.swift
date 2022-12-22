@@ -7,21 +7,25 @@ struct ContentView: View {
   @State private var answerText = ""
   
   var body: some View {
-    List {
-      VStack {
-        TextField("Ask everything...", text: $searchText)
-          .onSubmit {
-            handleAnswer()
-          }
-          .padding(.all)
-        Text("Chatbot says: ")
-        Label("\(answerText)", systemImage: "")
-          .labelStyle(.titleOnly)
-        Spacer()
+    NavigationStack {
+      List {
+        VStack {
+          TextField("Ask everything...", text: $searchText)
+            .onSubmit {
+              handleAnswer()
+            }
+            .padding(.all)
+          Text("Chatbot says: ")
+          .italic()
+          .foregroundColor(.cyan)
+          Label("\(answerText)", systemImage: "")
+            .labelStyle(.titleOnly)
+          Spacer()
+        }
+        .padding()
       }
-      .padding()
+      .navigationTitle("Test OpenAI")
     }
-    .navigationTitle("Test OpenAI")
   }
   
   private func handleAnswer() {

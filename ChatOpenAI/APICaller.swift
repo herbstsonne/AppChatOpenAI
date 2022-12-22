@@ -6,7 +6,7 @@ final class APICaller {
   
   //what does frozen?
   @frozen enum Constants {
-    static let key = "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"
+    static let key = "" // You have to get your own token here: https://beta.openai.com/
   }
   
   private var client: OpenAISwift?
